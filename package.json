@@ -1,0 +1,45 @@
+{
+  "name": "renterd-split",
+  "version": "1.0.0",
+  "description": "Split a video file into multiple qualities, and then upload via renterd",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "author": "David Weatherall",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react-dom": "^18.2.18",
+    "css-loader": "^6.8.1",
+    "electron": "^28.1.0",
+    "style-loader": "^3.3.3",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.3.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "@types/react": "^18.2.46",
+    "electron-context-menu": "^3.6.1",
+    "ffmpeg": "^0.0.4",
+    "ffmpeg-static": "^5.2.0",
+    "ffprobe-static": "^3.1.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "hls.js": "^1.4.14",
+    "node-fetch": "^3.3.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "uuid": "^9.0.1"
+  },
+  "build": {
+    "asarUnpack": [
+      "node_modules/ffmpeg-static/bin/${os}/${arch}/ffmpeg",
+      "node_modules/ffmpeg-static/index.js",
+      "node_modules/ffmpeg-static/package.json"
+    ]
+  }
+}
